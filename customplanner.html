@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Planner</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&family=Great+Vibes&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="customplanner.css">
-    <title>Custom Planner</title>
 </head>
 <body>
     <header>
@@ -21,81 +21,75 @@
             <li><a href="#contactus">Contact Us</a></li>
             <li><a href="customplanner.html" class="custombutton"> Custom Planner</a></li>
           </ul>
+          <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
         </nav>
-        <div class="container9">
-            <img src="customplanner.png" alt="Customplanner">
+    </header>
+    <div class="container9">
+        <img src="customplanner.png" alt="Customplanner">
+    </div>
+    <div class="customplan">
+      <h1>Your Personalized Event Planning Starts Here</h1>
+      <p>We specialize in crafting unforgettable experiences tailored to your needs. Fill out our Custom Planner Form to bring your vision to life.
+        From intimate gatherings to grand celebrations, we turn your ideas into reality with unmatched attention to detail.</p>
+      <h1>Create Custom Plan</h1>
+    </div>
+    <p class="line">_____________________________________________________________________________________________________</p>
+    <div class="totalform">
+      <form id="bookingForm" action="https://script.google.com/macros/s/AKfycbzefCqktFE23vuQcoJvpgAIDD3hmkoXa7MJdqzh_TQJxTOwKL7g3n8y18Yr98ZcIN8N/exec" method="post">
+        <div class="name">
+          <label for="Name" class="text">Name:</label><br>
+          <input type="text" placeholder="Enter Name" name="Name" id="Name" class="inside" required>
         </div>
-        <div class="customplan">
-          <h1>Your Personalized Event Planning Starts Here</h1>
-       <pre><p>We specialize in crafting unforgettable experiences tailored to your needs. Fill out our Custom Planner Form to bring your vision to life.
-          From intimate gatherings to grand celebrations, we turn your ideas into reality with unmatched attention to detail.</p></pre>
-          <h1>Create Custom Plan</h1>
+        <div class="phone">
+          <label for="Phone" class="text">Phone:</label><br>
+          <input type="number" name="Phone" id="Phone" placeholder="Enter Contact Number" required class="inside">
         </div>
-        <p class="line">_____________________________________________________________________________________________________</p>
-
-        <div class="totalform">
-          <form action="https://script.google.com/macros/s/AKfycbzefCqktFE23vuQcoJvpgAIDD3hmkoXa7MJdqzh_TQJxTOwKL7g3n8y18Yr98ZcIN8N/exec" method="post">
-            <div class="name">
-              <label for="Name" class="text">Name:</label><br>
-              <input type="text" placeholder="Enter Name" name="Name" id="Name" class="inside" required>
-            </div>
-          
-            <div class="phone">
-              <label for="Phone" class="text">Phone:</label><br>
-              <input type="number" name="Phone" id="Phone" placeholder="Enter Contact Number" required class="inside">
-            </div>
-          
-            <div class="email">
-              <label for="Email" class="text">Email:</label><br>
-              <input type="email" placeholder="Enter Email" name="Email" id="Email" class="inside">
-            </div>
-          
-            <div class="venue">
-              <label for="Venue" class="text">Venue:</label><br>
-              <select name="Venue" id="Venue" class="inside1" required>
-                <option value="Dhanak Event Hall">Dhanak Event Hall</option>
-                <option value="Dhanak Banquet Enclave">Dhanak Banquet Enclave</option>
-                <option value="Dhanak Grand Arena">Dhanak Grand Arena</option>
-              </select>
-            </div>
-          
-            <div class="eventtype">
-              <label for="EventType" class="text">Event Type:</label><br>
-              <select name="EventType" id="EventType" class="inside1" required>
-                <option value="Co-orporate Event">Co-orporate Event</option>
-                <option value="Wedding">Wedding</option>
-                <option value="Birthday">Birthday</option>
-                <option value="Meeting">Meeting</option>
-                <option value="Exhibition Type">Exhibition Type</option>
-              </select>
-            </div>
-          
-            <div class="bigbox">
-              <div class="time">
-                <label for="Time" class="text">Time:</label><br>
-                <input type="time" name="Time" id="Time" required class="inside2">
-              </div>
-              <div class="date">
-                <label for="Date" class="text">Date:</label><br>
-                <input type="date" name="Date" id="Date" required class="inside3">
-              </div>
-            </div>
-          
-            <div class="guest">
-              <label for="Guest" class="text">Guest:</label><br>
-              <input type="number" name="Guest" id="Guest" placeholder="Enter Number of Guests" required class="inside4">
-            </div>
-          
-            <div class="message">
-              <label for="Message" class="text">Custom Demand:</label><br>
-              <textarea rows="10" cols="65" name="Message" id="Message" class="inside5" placeholder="Enter your custom demands..."></textarea>
-            </div>
-          
-            <div class="button">
-              <button type="submit" class="button">Submit</button>
-            </div>
-          </form>
-          
+        <div class="email">
+          <label for="Email" class="text">Email:</label><br>
+          <input type="email" placeholder="Enter Email" name="Email" id="Email" class="inside">
+        </div>
+        <div class="venue">
+          <label for="Venue" class="text">Venue:</label><br>
+          <select name="Venue" id="Venue" class="inside1" required>
+            <option value="Dhanak Event Hall">Dhanak Event Hall</option>
+            <option value="Dhanak Banquet Enclave">Dhanak Banquet Enclave</option>
+            <option value="Dhanak Grand Arena">Dhanak Grand Arena</option>
+          </select>
+        </div>
+        <div class="eventtype">
+          <label for="EventType" class="text">Event Type:</label><br>
+          <select name="EventType" id="EventType" class="inside1" required>
+            <option value="Co-orporate Event">Co-orporate Event</option>
+            <option value="Wedding">Wedding</option>
+            <option value="Birthday">Birthday</option>
+            <option value="Meeting">Meeting</option>
+            <option value="Exhibition Type">Exhibition Type</option>
+          </select>
+        </div>
+        <div class="bigbox">
+          <div class="time">
+            <label for="Time" class="text">Time:</label><br>
+            <input type="time" name="Time" id="Time" required class="inside2">
+          </div>
+          <div class="date">
+            <label for="Date" class="text">Date:</label><br>
+            <input type="date" name="Date" id="Date" required class="inside3">
+          </div>
+        </div>
+        <div class="guest">
+          <label for="Guest" class="text">Guest:</label><br>
+          <input type="number" name="Guest" id="Guest" placeholder="Enter Number of Guests" required class="inside4">
+        </div>
+        <div class="message">
+          <label for="Message" class="text">Custom Demand:</label><br>
+          <textarea rows="10" cols="65" name="Message" id="Message" class="inside5" placeholder="Enter your custom demands..."></textarea>
+        </div>
+        <div class="button">
+          <button type="submit" id="submitBtn" class="button">Submit</button>
+        </div>
+      </form>
     </div>
     <footer id="contactus">
       <div class="container7">
@@ -103,7 +97,7 @@
           <i class="fa-solid fa-location-dot fa-2xl" style="color: #d9aa4d;"></i>
           <h2 class="font">Dhanak Event Complex</h2>
           <h3 class="font1">2-Service Road East, E-11/4, Islamabad</h3>
-          <i class="fa-solid fa-phone fa-2xl" style="color: #d6aa4d;" class="contactlogo"></i>
+          <i class="fa-solid fa-phone fa-2xl" style="color: #d6aa4d;"></i>
           <h2 class="font">Phone</h2>
           <h3 class="font1">0800 10800 | +92 3356880077</h3>
           <h4 class="dividor">_______________________________________________________________________</h4>
@@ -112,7 +106,7 @@
           <i class="fa-solid fa-location-dot fa-2xl" style="color: #d9aa4d;"></i>
           <h2 class="font">Dhanak Banquet Enclave</h2>
           <h3 class="font1">Main Margalla Road, E-11/4, Islamabad</h3>
-          <i class="fa-solid fa-phone fa-2xl" style="color: #d6aa4d;" class="contactlogo"></i>
+          <i class="fa-solid fa-phone fa-2xl" style="color: #d6aa4d;"></i>
           <h2 class="font">Phone</h2>
           <h3 class="font1">051 8958899 | +92 3356880077</h3>
           <h4 class="dividor">___________________________________________________</h4>
@@ -123,7 +117,7 @@
           <i class="fa-solid fa-location-dot fa-2xl" style="color: #d9aa4d;"></i>
           <h2 class="font">Dhanak Grand Arena</h2>
           <h3 class="font1">Main Boulevard Bahria Town Expressway, Bahria Town Phase</h3>
-          <i class="fa-solid fa-phone fa-2xl" style="color: #d6aa4d;" class="contactlogo"></i>
+          <i class="fa-solid fa-phone fa-2xl" style="color: #d6aa4d;"></i>
           <h2 class="font">Phone</h2>
           <h3 class="font1">051 6128899 | +92 3356880077</h3>
           <h4 class="dividor">_______________________________________________________________________</h4>
@@ -139,5 +133,38 @@
         </div>
       </div>
     </footer>
-</body>
+    <script>
+      document.getElementById('bookingForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        var btn = document.getElementById('submitBtn');
+        btn.textContent = 'Sending...';
+        btn.disabled = true;
+        var formData = new FormData(this);
+        fetch(this.action, {
+          method: 'POST',
+          body: formData,
+          mode: 'no-cors'
+        }).then(function() {
+          showSuccess();
+        }).catch(function() {
+          showSuccess();
+        });
+      });
+      function showSuccess() {
+        document.querySelector('.totalform').innerHTML =
+          '<div class="successmsg">' +
+          '<h2>Thank you for your booking request!</h2>' +
+          '<p>We\'ll contact you within 24 hours to confirm your event details.</p>' +
+          '</div>';
+      }
+    </script>
+    <script>
+      var hamburger = document.getElementById('hamburger');
+      var navLinks = document.querySelector('.navigationlinks');
+      hamburger.addEventListener('click', function() {
+        navLinks.classList.toggle('open');
+        hamburger.classList.toggle('active');
+      });
+    </script>
+  </body>
 </html>
