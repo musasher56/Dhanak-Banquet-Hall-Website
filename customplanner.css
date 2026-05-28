@@ -2,7 +2,6 @@ body {
     margin: 0;
  
 }
-
 .navigationbar {
     display: flex;
     justify-content: space-between;
@@ -196,9 +195,11 @@ form .inside{
 form .inside1{
     width: 75%;
     margin-top: 10px;
+    height: 35px;
     margin-left: 70px;
-    padding: 10%;
-    font-size: 40px;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: 400;
 }
 form .inside2{
     width:50%;
@@ -299,8 +300,6 @@ font-weight: 500;
     background-color: rgb(64, 53, 49);
     width: 50%;
     height: 400px;
-
-
 }
 
 .location {
@@ -315,4 +314,63 @@ font-weight: 500;
 
 .dividor {
     color: #ffffff;
+}
+
+.successmsg {
+    text-align: center;
+    padding: 60px 20px;
+    font-family: Antic Didone;
+}
+
+.successmsg h2 {
+    font-size: 2rem;
+    color: rgb(64, 53, 49);
+    margin-bottom: 15px;
+}
+
+.successmsg p {
+    font-size: 1.1rem;
+    color: #555;
+}
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 32px; height: 26px;
+    background: transparent; border: none; cursor: pointer; padding: 0;
+}
+.hamburger span {
+    display: block; width: 100%; height: 3px;
+    background: #ffffff; border-radius: 2px; transition: all 0.3s ease;
+}
+.hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
+
+@media (max-width: 768px) {
+    .navigationbar { flex-wrap: wrap; padding: 10px 15px; }
+    .hamburger { display: flex; }
+    .navigationlinks { display: none; flex-direction: column; width: 100%; background-color: rgb(64,53,49); padding: 10px 0; margin: 0; }
+    .navigationlinks.open { display: flex; }
+    .navigationlinks li { margin: 8px 20px; }
+    .navigationlinks a { font-size: 16px; }
+    img { height: 60px; width: 75px; }
+    .container9 { height: 180px; }
+    .customplan { height: auto; padding: 20px 15px; }
+    .customplan h1 { font-size: 1.5rem; } 
+    .totalform { width: 95%; margin-left: 2.5%; margin-right: 2.5%; height: auto; border-radius: 10px; }
+    .name, .phone, .email, .venue, .eventtype, .guest, .message { width: 95%; margin-left: 2.5%; height: auto; padding: 10px 0; }
+    form .text { font-size: 1.1rem; margin-left: 15px; }
+    form .inside, form .inside1, form .inside4 { width: 90%; margin-left: 15px; }
+    .bigbox { flex-direction: column; width: 95%; margin-left: 2.5%; height: auto; }
+    .date, .time { width: 100%; height: auto; padding: 10px 0; }
+    form .inside2, form .inside3 { width: 85%; margin-left: 15px; }
+    form .inside5 { margin-left: 15px; width: 90%; }
+    .message { height: auto; }
+    .button { margin-left: 15px; }
+    .container7, .container8 { flex-direction: column; height: auto; padding: 30px 20px; gap: 0; }
+    .leftcontact, .rightcontact, .leftcontact1, .rightcontact1 { width: 100%; margin-left: 0; margin-top: 0; margin-bottom: 20px; }
+    .font { font-size: 20px; }
+    .font1 { font-size: 15px; }
+    .dividor { display: none; }
 }
